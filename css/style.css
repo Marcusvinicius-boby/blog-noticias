@@ -1,25 +1,27 @@
-
 /* Fonte */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,700&display=swap');
+
 :root {
-    --cor-principal:#6c5fff;
-    --cor-01:#f9f9f9;
-    --cor-02:#dfdfdf;
-    --cor-03:#8e8e8e;
-    --cor-04:#595959;
-    --cor-05:#232323;
+    /* Paleta de cores */
+    --cor-principal: #6c5fff;
+    --cor-01: #f9f9f9;
+    --cor-02: #dfdfdf;
+    --cor-03: #8e8e8e;
+    --cor-04: #595959;
+    --cor-05: #232323;
 }
+
 /* Reset */
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     font-family: 'Poppins', sans-serif;
+    font-size: 16px;
 }
-
 
 body {
     background-color: var(--cor-02);
@@ -44,6 +46,14 @@ header {
 
 header span {
     color: var(--cor-principal);
+}
+
+.menu-responsivo {
+    display: none;
+}
+
+.menu-responsivo i {
+    font-size: 3rem;
 }
 
 nav ul {
@@ -122,8 +132,6 @@ article:hover {
     padding: 1rem;
 }
 
-
-
 /* ===== Rodape ===== */
 footer {
     background-color: var(--cor-05);
@@ -135,4 +143,108 @@ footer {
     bottom: 0;
     opacity: 0.6;
 }
-/* oi boa tarde */
+
+
+/* ===== Media Queries ===== */
+
+/* XS Extra Small - celular retrato (portrait) */
+@media (max-width: 576px) {
+    header {
+        padding: 1rem 2rem;
+    }
+    
+    .menu-responsivo {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    article {
+        height: auto;
+        margin: 1rem;
+    
+        display: flex;
+        flex-direction: column;
+    }
+
+    .foto {
+        margin-right: 0;
+    }
+    
+    .foto img {
+        width: 100%;
+    }
+
+    .texto {
+        max-height: 10rem;
+        overflow: hidden;
+    }
+
+
+    /* TESTE */
+    header {
+        background-color: #ff4df9;
+    }
+}
+
+/* SM Small - celular paisagem (landscape) */
+@media (min-width: 576px) {
+    header {
+        padding: 1rem 2rem;
+    }
+
+    .menu-responsivo {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    article {
+        height: auto;
+        margin: 1rem;
+    
+        display: flex;
+        flex-direction: column;
+    }
+
+    .foto {
+        margin-right: 0;
+    }
+    
+    .foto img {
+        width: 100%;
+    }
+
+    .texto {
+        max-height: 10rem;
+        overflow: hidden;
+    }
+
+
+    /* TESTE */
+    header {
+        background-color: #2139a7;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    header {
+        padding: 1rem 3rem;
+    }
+    
+    article {
+        margin: 3rem;
+    }
+    
+
+
+    /* TESTE */
+    header {
+        background-color: #b805b2;
+    }
+}
